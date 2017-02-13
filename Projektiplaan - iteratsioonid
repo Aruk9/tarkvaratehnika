@@ -1,0 +1,28 @@
+Projektiplaan
+    
+Projekti eesmärgiks on luua veebipõhine müügitarkvara toodete/teenuste müügi korraldamiseks(haldamiseks). 
+Veebikeskkonna arendus koosneb kolmest iteratsioonist, millest igaüks eraldi koosneb omakorda ärianalüüsist, süsteemianalüüsist ning arendusest ja sellega seotud tegevustest (testimine jms). Etappe võib kohaldada vastavalt olukorra muutumisele. 
+
+Iteratsioonid
+
+Esimene iteratsioon - 6. nädal
+    Müüja pool:
+Toodete lisamine, eemaldamine, muutmine
+Toodetele pildi, pealkirja ja märksõnade lisamine/muutmine
+    Andmebaasi pool:
+Toodete loetelu
+    
+Teine iteratsioon - 11.nädal
+    Müüja pool:
+Ostjate registreerimine
+Ostjale funktsionaalsus
+    Andmebaasi pool:
+Müüjate loetelu
+    Süsteemi pool:
+Müüjate registreerimine
+Ostjate loetelu
+
+Kolmas iteratsioon - 16.nädal
+    Backendi ja frontendi omavaheline integreerimine. Pooleli jäänud asjade lõpetamine.
+
+
