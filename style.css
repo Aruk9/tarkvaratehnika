@@ -1,64 +1,37 @@
-/* Kommentaar */
+a {
+    text-align: center;
+    background-color: transparent;
+    color: #BC6182;
+	padding: 5px;
+    margin: 25px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 20px;
+}
 
-.main {
-    background: white; /* cmd+e saab värvivaliku */
-    font-family: Calibri;
-}  
+ul {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+}
 
-a { 
-    background-color: black;
-    color: hotpink;
-    font-family: Avantgarde, sans-serif;
-    font-size: 15px;
+.menu {
+    padding: 8px;
+}
+
+.maintext {
+    padding-top: 10px;
+}
+
+body {
+    text-align: center;
+    margin: auto;
     padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 10px;
 }
 
 header {
-    height: 210px;
-    width: 100%;
-    background-color: black;
-    
+    position: absolute;
+    top: 5px;
+    left: 20px;
 }
 
-a:hover{
-    color: white;
-}
-
-.box {
-    text-align: left;
-    border: 1px solid black;
-}
-
-.addpicture {
-    text-align: left;
-    border: 1px solid black;
-    padding-bottom: 100px;
-}
-
-.contentbox {
-    text-align: left;
-    border: 1px solid black;
-    padding-bottom: 50px;
-    margin-bottom: 30px;
-}
-
-.center {
-    width: 1095px;
-    height: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-    vertical-align: middle;
-    background-color: white;
-    padding: 5px; 5px; 5px; 5px;
-    border-radius: 10px;
-}
-
-
-
-
-
-    
