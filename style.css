@@ -1,0 +1,64 @@
+/* Kommentaar */
+
+.main {
+    background: white; /* cmd+e saab värvivaliku */
+    font-family: Calibri;
+}  
+
+a { 
+    background-color: black;
+    color: hotpink;
+    font-family: Avantgarde, sans-serif;
+    font-size: 15px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+}
+
+header {
+    height: 210px;
+    width: 100%;
+    background-color: black;
+    
+}
+
+a:hover{
+    color: white;
+}
+
+.box {
+    text-align: left;
+    border: 1px solid black;
+}
+
+.addpicture {
+    text-align: left;
+    border: 1px solid black;
+    padding-bottom: 100px;
+}
+
+.contentbox {
+    text-align: left;
+    border: 1px solid black;
+    padding-bottom: 50px;
+    margin-bottom: 30px;
+}
+
+.center {
+    width: 1095px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    vertical-align: middle;
+    background-color: white;
+    padding: 5px; 5px; 5px; 5px;
+    border-radius: 10px;
+}
+
+
+
+
+
+    
