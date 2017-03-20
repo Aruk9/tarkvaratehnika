@@ -1,0 +1,61 @@
+<template>
+    
+    <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Salestrack müügihaldus</title>
+
+    <!-- Bootstrap -->
+    <link href="src/css/bootstrap.min.css" rel="stylesheet">
+    <link href="src/css/style.css" rel="stylesheet">
+    <link href="src/css/index.css" rel="stylesheet">
+    <link href="src/css/footer-distributed-with-address-and-phones%20copy.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+      
+    <script src="src/myaccount/myaccount.js"></script>
+    
+
+  </head>
+  <body>
+ 
+    <div class="header2" style="background-image:url(src/media/front1.jpeg)">
+          
+        <ul class="topnav" id="myTopnav">
+          <li><a href="index"><i class="fa fa-sign-out"></i>LOGI VÄLJA</a></li>
+          <li><a href="#/myclients"><i class="fa fa-users"></i>MINU KLIENDID</a></li>
+          <li><a href="#/myproducts"><i class="fa fa-th"></i>MINU TOOTED</a></li>
+          <li class="icon">
+            <a href="" onclick="myFunction()">&#9776;</a>
+          </li>
+        </ul>
+          
+          <img class="logo1" src="src/media/salestrack-logo-valge-vaike.png">
+        
+          <h1>minu konto</h1>
+      
+      </div>
+      
+    <script>
+        
+         function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+      
+      
+    </script>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="src/css/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+</template>

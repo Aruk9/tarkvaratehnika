@@ -1,0 +1,127 @@
+<template>
+    
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Salestrack müügihaldus</title>
+
+    <link href="src/css/bootstrap.min.css" rel="stylesheet">
+    <link href="src/css/style.css" rel="stylesheet">
+    <link href="src/css/index.css" rel="stylesheet">
+    <link href="src/css/footer-distributed-with-address-and-phones%20copy.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+
+    </head>
+    <body>
+
+      <div class="header2" style="background-image:url(src/media/front1.jpeg)">
+        
+        <ul class="topnav" id="myTopnav">
+          <li><a href="index"><i class="fa fa-sign-out"></i>LOGI VÄLJA</a></li>
+          <li><a href="#/myclients"><i class="fa fa-users"></i>MINU KLIENDID</a></li>
+          <li><a href="#/myaccount"><i class="fa fa-user"></i>MINU KONTO </a></li>
+          <li class="icon">
+            <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+          </li>
+        </ul>
+          
+          <img class="logo1" src="src/media/salestrack-logo-valge-vaike.png">
+          
+          <h1>lisa toode</h1>
+        
+      </div>
+      
+      <div class="addproduct">
+          
+          <div class="col-sm-12">
+              
+              
+            <div class="container">
+              <form action="lisa.php" method="post" enctype="multipart/form-data">
+               
+                <label for="productname">Toote nimi:</label>
+                <input type="text" id="productname" name="productname" placeholder="Sisesta toote nimi.." required>
+
+                <label for="productprice">Toote hind:</label>
+                <input type="text" id="productprice" name="productprice" value ="0" placeholder="Sisesta toote hind..">
+                  
+                 <label for="quantity">Kogus:</label>
+                <input type="text" id="quantity" name="quantity" value="0" placeholder="Sisesta toote kogus..">
+
+                <label for="description">Kirjeldus:</label>
+                <textarea id="description" name="description" placeholder="Toote täpsem kirjeldus.." style="height:200px"></textarea>
+                  
+                <label for="productpicture">Toote pilt:</label>
+                <input type="file" id="productpicture" name="productpicture" placeholder="Sisesta toote pilt..">
+
+                <input type="submit" name="submit" value="LISA TOODE">
+
+              </form>
+            </div>
+
+          </div>
+        </div>
+      
+        <div class="myproducts" style="background-color: white">
+            
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+               <h1 style="color:black; padding-top:3%">MINU TOOTED</h1>
+			  
+                  <table class="table">
+                    <thead>				
+
+                      <tr>
+                        <th>Pilt</th>
+                        <th>Nimi</th>
+                        <th>Hind</th>
+                        <th>Kogus</th>
+                        <th>Kirjeldus</th>
+						<th>Kustuta</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+						<tr>
+                        <td width="10%" ><img src="/~sameos/Tarkvaratehnika/uploads/<?php echo $row['Pilt']; ?>" height="42" width="42"></td>
+                        <td width="25%" ></td>
+                        <td width="10%" ></td>
+                        <td width="10%" ></td>
+                        <td width="30%" ></td>
+						<td width="15%" ><form action ="kustuta.php" method = "post">
+						 <input type="hidden" name="ID" value="<?php echo $row['ID']; ?>">
+					<input type = 'submit' name='delete' value = " Kustuta toode "></form></td>
+						</tr>
+                    </tbody>
+                  </table>
+				
+            </div>
+                
+                <div class="col-sm-1"></div>
+      
+        </div>
+      
+    <script>
+        
+         function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+      
+      
+    </script>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="src/css/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+</template>
