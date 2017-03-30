@@ -41,22 +41,22 @@
               
               
             <div class="container">
-              <form action="lisa.php" method="post" enctype="multipart/form-data">
+              <form id="productform" submit.delegate="addProduct()">
                
-                <label for="productname">Toote nimi:</label>
-                <input type="text" id="productname" name="productname" placeholder="Sisesta toote nimi.." required>
+                <label for="productName">Toote nimi:</label>
+                <input type="text" id="productName" name="productName" placeholder="Sisesta toote nimi.." required value.bind="userData.productName">
 
-                <label for="productprice">Toote hind:</label>
-                <input type="text" id="productprice" name="productprice" value ="0" placeholder="Sisesta toote hind..">
+                <label for="productPrice">Toote hind:</label>
+                <input type="text" id="productPrice" name="productPrice" value ="0" placeholder="Sisesta toote hind.." value.bind="userData.productPrice">
                   
-                 <label for="quantity">Kogus:</label>
-                <input type="text" id="quantity" name="quantity" value="0" placeholder="Sisesta toote kogus..">
+                <label for="quantity">Kogus:</label>
+                <input type="text" id="quantity" name="quantity" value="0" placeholder="Sisesta toote kogus.." value.bind="userData.quantity">
 
                 <label for="description">Kirjeldus:</label>
-                <textarea id="description" name="description" placeholder="Toote täpsem kirjeldus.." style="height:200px"></textarea>
+                <textarea id="description" name="description" placeholder="Toote täpsem kirjeldus.." style="height:200px" value.bind="userData.description"></textarea>
                   
-                <label for="productpicture">Toote pilt:</label>
-                <input type="file" id="productpicture" name="productpicture" placeholder="Sisesta toote pilt..">
+                <label for="productPicture">Toote pilt:</label>
+                <input type="file" id="productPicture" name="productPicture" placeholder="Sisesta toote pilt.." value.bind="userData.productPicture">
 
                 <input type="submit" name="submit" value="LISA TOODE">
 
@@ -85,16 +85,9 @@
                       </tr>
                     </thead>
                     <tbody>
-						<tr>
-                        <td width="10%" ><img src="/~sameos/Tarkvaratehnika/uploads/<?php echo $row['Pilt']; ?>" height="42" width="42"></td>
-                        <td width="25%" ></td>
-                        <td width="10%" ></td>
-                        <td width="10%" ></td>
-                        <td width="30%" ></td>
-						<td width="15%" ><form action ="kustuta.php" method = "post">
-						 <input type="hidden" name="ID" value="<?php echo $row['ID']; ?>">
-					<input type = 'submit' name='delete' value = " Kustuta toode "></form></td>
-						</tr>
+						<ul>
+                            <li repeat.for="user of userList">${user.productPrice} ${user.productName}</li>
+                        </ul>
                     </tbody>
                   </table>
 				

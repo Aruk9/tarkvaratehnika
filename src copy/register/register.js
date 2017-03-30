@@ -1,28 +1,24 @@
 import {HttpClient, json}  from 'aurelia-fetch-client'
+import environment from '../environment'
 
 export class register {
     
     addUser() {
+        
         let client = new HttpClient();
         
         let userData = {
-            "firstName": "MyName",
-            "lastName": "MyLastName",
-            "numOfPets": 11  
-        
+            "firstname": "MyName",
         }
-
-        client.fetch('http://localhost:8080/users/add', {'method': "POST",'body': json(userData)
-    })
-        .then(response => response.json())
-        .then(data => {
-            console.log("Server saatis" + data.firstName);
-    });
+        
+        client.fetch( environment.serverurl + '/users/add', {
+            'method': "POST",
+            'body': json(userData)
+        })
         
         
+        console.log("Method executed!")
         
-        console.log("Method Executed")
-    }
-    
-    
+        
+    }   
 }

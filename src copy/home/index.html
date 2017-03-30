@@ -142,6 +142,38 @@
       
 </div>
       
+      <div class="addproduct">
+          
+          <div class="col-sm-12">
+              
+              
+            <div class="container">
+              <form id="productform" submit.delegate="addProduct()">
+               
+                <label for="productName">Toote nimi:</label>
+                <input type="text" id="productName" name="productName" placeholder="Sisesta toote nimi.." required value.bind="userData.productName">
+
+                <label for="productPrice">Toote hind:</label>
+                <input type="text" id="productPrice" name="productPrice" value ="0" placeholder="Sisesta toote hind.." value.bind="userData.productPrice">
+                  
+                <label for="quantity">Kogus:</label>
+                <input type="text" id="quantity" name="quantity" value="0" placeholder="Sisesta toote kogus.." value.bind="userData.quantity">
+
+                <label for="description">Kirjeldus:</label>
+                <textarea id="description" name="description" placeholder="Toote täpsem kirjeldus.." style="height:200px" value.bind="userData.description"></textarea>
+                  
+                <label for="productPicture">Toote pilt:</label>
+                <input type="file" id="productPicture" name="productPicture" placeholder="Sisesta toote pilt.." value.bind="userData.productPicture">
+
+                <input type="submit" name="submit" value="LISA TOODE">
+
+              </form>
+            </div>
+
+          </div>
+        </div>
+    
+      
     <script>
         
          function myFunction() {
