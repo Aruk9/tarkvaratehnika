@@ -189,9 +189,12 @@ h1 {
 
 .myproducts {
     background-color: rgba(222, 74, 185, 0.12);
-    margin-top: 20px;
-    margin-bottom: 20px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;   
 }
+
 
 .fa {
     padding-right: 5px;
