@@ -1,7 +1,7 @@
 import {HttpClient, json} from 'aurelia-fetch-client';
 
 
-export class myproducts {
+export class addproducts {
 
 	userData = {}
 	userList = []

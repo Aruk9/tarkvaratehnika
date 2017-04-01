@@ -24,6 +24,7 @@
           <li><a href="index"><i class="fa fa-sign-out"></i>LOGI VÄLJA</a></li>
           <li><a href="#/myclients"><i class="fa fa-users"></i>MINU KLIENDID</a></li>
           <li><a href="#/myaccount"><i class="fa fa-user"></i>MINU KONTO </a></li>
+          <li><a href="#/addproducts"><i class="fa fa-plus"></i>LISA TOOTEID</a></li>
           <li class="icon">
             <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
           </li>
@@ -31,50 +32,20 @@
           
           <img class="logo1" src="src/media/salestrack-logo-valge-vaike.png">
           
-          <h1>lisa toode</h1>
+          <h1>kõik tooted</h1>
         
       </div>
       
-      <div class="addproduct">
-          
-          <div class="col-sm-12">
-              
-              
-            <div class="container">
-              <form id="productform" submit.delegate="addProduct()">
-               
-                <label for="productName">Toote nimi:</label>
-                <input type="text" id="productName" name="productName" placeholder="Sisesta toote nimi.." required value.bind="userData.productName">
-
-                <label for="productPrice">Toote hind:</label>
-                <input type="text" id="productPrice" name="productPrice" value ="0" placeholder="Sisesta toote hind.." value.bind="userData.productPrice">
-                  
-                <label for="quantity">Kogus:</label>
-                <input type="text" id="quantity" name="quantity" value="0" placeholder="Sisesta toote kogus.." value.bind="userData.quantity">
-
-                <label for="description">Kirjeldus:</label>
-                <textarea id="description" name="description" placeholder="Toote täpsem kirjeldus.." style="height:200px" value.bind="userData.description"></textarea>
-                  
-                <label for="productPicture">Toote pilt:</label>
-                <input type="file" id="productPicture" name="productPicture" placeholder="Sisesta toote pilt.." value.bind="userData.productPicture">
-
-                <input type="submit" name="submit" value="LISA TOODE">
-
-              </form>
-            </div>
-
-          </div>
-        </div>
+     
       
         <div class="myproducts" style="background-color: white">
             
             <div class="col-sm-1"></div>
             <div class="col-sm-10">
-               <h1 style="color:black; padding-top:3%">MINU TOOTED</h1>
-			  
-                  <table class="table">
+             
+   
+                  <table class="table" id="allproductsTable">
                     <thead>				
-
                       <tr>
                         <th>Pilt</th>
                         <th>Nimi</th>

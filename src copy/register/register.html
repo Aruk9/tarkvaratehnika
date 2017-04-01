@@ -24,6 +24,7 @@
           
         <ul class="topnav" id="myTopnav">
           <li><a href="index"><i class="fa fa-chevron-left"></i>ESILEHT</a></li>
+          
           <li class="icon">
             <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
           </li>
@@ -37,34 +38,33 @@
       
       <div class="registrationform" >
          
-          
-          <div class="col-sm-12">
+          <div class="col-sm-3"></div>  
+          <div class="col-sm-6">
 
            <form id="registrationform" submit.delegate="addUser()">
-              <div class="container">
-                <label><b>Ettevõtte nimi</b></label>
+                <label for="companyName"><b>Ettevõtte nimi</b></label>
                 <br>
-                <input type="text" placeholder="Ettevõtte nimi" name="name" required> 
+                <input type="text" id="companyName" placeholder="Ettevõtte nimi" name="companyName" required value.bind="userData.companyName"> 
                 <br>
-                <label><b>Registrikood</b></label>
+                <label for="regCode"><b>Registrikood</b></label>
                 <br>
-                <input type="text" placeholder="Registrikood" name="regcode" required>
+                <input type="text" id="regCode" placeholder="Registrikood" name="regCode" required value.bind="userData.regCode">
                 <br>
-                <label><b>Telefon</b></label>
+                <label for="phoneNumber"><b>Telefon</b></label>
                 <br>
-                <input type="text" placeholder="Telefoninumber" name="phone" required>
+                <input type="text" id="phoneNumber" placeholder="Telefoninumber" name="phoneNumber" required value.bind="userData.phoneNumber">
                 <br>
-                <label><b>Email</b></label>
+                <label for="email"><b>Email</b></label>
                 <br>
-                <input type="text" placeholder="Kontaktmeil" name="email" required>
+                <input type="text"id="email" placeholder="Kontaktmeil" name="email" required value.bind="userData.email">
                 <br>
-                <label><b>Salasõna</b></label>
+                <label for="password"><b>Salasõna</b></label>
                 <br>
-                <input type="password" placeholder="Sisesta salasõna" name="psw" required>
+                <input type="password" id="password" placeholder="Sisesta salasõna" name="password" required value.bind="userData.password">
                 <br>
-                <label><b>Korda salasõna</b></label>
+                <label for="password-repeat"><b>Korda salasõna</b></label>
                 <br>
-                <input type="password" placeholder="Korda salasõna" name="psw-repeat" required>
+                <input type="password" id="password repeat" placeholder="Korda salasõna" name="password-repeat" required value.bind="userData.password-repeat">
                 <br>
                 <input type="checkbox" checked="checked"> Mäleta mind
                 <p>Registreerudes nõustud meie <a class="submit" href="#">Kasutustingimustega</a></p>
@@ -73,13 +73,14 @@
                   <button type="button" class="cancelbtn">Tühista</button>
                   <button type="submit" class="signupbtn">Registreeri</button>
                 </div>
-              </div>
             </form>
           </div>
           
       </div>
+      <div class="col-sm-3"></div>
     
       <div class="footer">
+          
       <div class="col-sm-12">
       
       <footer class="footer-distributed" style="background-color: rgba(255, 255, 255, 0.7)">

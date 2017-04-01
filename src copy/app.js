@@ -14,8 +14,11 @@ configureRouter(config, router) {
         
         { route: 'myclients', name: 'myclients', moduleId: 'myclients/myclients',title: "Minu kliendid",   nav: true },
         
-        { route: 'myproducts', name: 'myproducts', moduleId: 'myproducts/myproducts',  title: "Minu tooted", nav: true },
+        { route: 'addproducts', name: 'addproducts', moduleId: 'addproducts/addproducts',  title: "Lisa tooteid", nav: true },
 
+        { route: 'allproducts', name: 'allproducts', moduleId: 'allproducts/allproducts',  title: "Kõik tooted", nav: true },
+        
+        { route: 'saleAction', name: 'saleAction', moduleId: 'saleAction/saleAction',  title: "Uus müük", nav: true },
     ]);
   }
 }
