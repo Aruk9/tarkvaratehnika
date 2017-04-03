@@ -4,13 +4,24 @@ import {HttpClient, json} from 'aurelia-fetch-client';
 export class addproducts {
     
     myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
         } 
+    
+
+    function() {
+        var div = document.getElementById('newpost');
+        if (div.style.display !== 'none') {
+            div.style.display = 'none';
+        }
+        else {
+            div.style.display = 'block';
+            }
+        }
 
 	userData = {}
 	userList = []
