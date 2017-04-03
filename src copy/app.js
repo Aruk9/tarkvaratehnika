@@ -19,6 +19,8 @@ configureRouter(config, router) {
         { route: 'allproducts', name: 'allproducts', moduleId: 'allproducts/allproducts',  title: "Kõik tooted", nav: true },
         
         { route: 'saleAction', name: 'saleAction', moduleId: 'saleAction/saleAction',  title: "Uus müük", nav: true },
+        
+        { route: 'login', name: 'login', moduleId: 'login/login',  title: "Logi sisse", nav: true },
     ]);
   }
 }

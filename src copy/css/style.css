@@ -111,7 +111,7 @@ input[type=text], input[type=password] {
 
 b {
     
-    color:black;
+    color:white;
 
 }
 
@@ -121,7 +121,7 @@ button {
     background-color: rgba(222, 74, 185, 0.9);
     color: white;
     padding: 14px 20px;
-    margin: 8px 0;
+    margin-bottom: 7%;
     border: none;
     cursor: pointer;
     width: 100%;
@@ -203,8 +203,4 @@ h1 {
 .myclients {
     margin: 3%;
 }
-
-
-
-
 
