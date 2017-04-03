@@ -26,7 +26,7 @@
          <ul class="topnav" id="myTopnav" style="background-color:rgba(255, 255, 255, 0.15)">
           <li><a href="#/login"><i class="fa fa-sign-out"></i>LOGI SISSE</a></li>
           <li class="icon">
-            <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+            <a href="javascript:void(0);" click.delegate="myFunction()">&#9776;</a>
           </li>
         </ul>
 
@@ -142,20 +142,7 @@
       
 </div>
     
-      
-    <script>
-        
-         function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
-        }
-      
-      
-    </script>
+
 
    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

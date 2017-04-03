@@ -2,6 +2,15 @@ import {HttpClient, json} from 'aurelia-fetch-client';
 
 
 export class addproducts {
+    
+    myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        } 
 
 	userData = {}
 	userList = []
