@@ -45,11 +45,6 @@ export class addproducts {
 			'method': "POST",
 			'body': json(this.userData)
 		})
-			.then(response => response.json())
-			.then(data => {
-				console.log("Server saatis " + data.productPrice);
-		});
-
-		console.log("Method executed!")
+			.then(response => response.json())			
 	}
 }

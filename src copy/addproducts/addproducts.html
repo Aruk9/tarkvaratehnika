@@ -37,7 +37,7 @@
         
       <button id='button' click.delegate="function()" style="margin-bottom: 2%"><i class="fa fa-plus"></i>LISA TOODE</button>
       
-      <div class="col-sm-12" id="newpost">
+      <div  class="col-sm-12"  id="newpost">
           
           
           <div class="col-sm-3"></div>
@@ -81,7 +81,7 @@
                 <p class="text4" style="font-family: 'Exo'; margin-top:3%">KÕIK TOOTED</p>
              
    
-                  <table class="table" id="allproductsTable">
+                  <table class="table table-striped" id="allproductsTable">
                     <thead>				
                       <tr>
                         <th>Pilt</th>
@@ -93,9 +93,14 @@
                       </tr>
                     </thead>
                     <tbody>
-						<ul>
-                            <li repeat.for="user of userList">${user.productPrice} ${user.productName}</li>
-                        </ul>
+						<tr align = "left" repeat.for="user of userList">
+							<td></td>
+                            <td>${user.productName} </td>
+                            <td>${user.productPrice} </td>
+                            <td>${user.quantity} </td>
+                            <td>${user.description} </td>
+                            <td></td>
+                        </tr>
                     </tbody>
                   </table>
 				

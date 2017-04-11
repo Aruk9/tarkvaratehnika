@@ -35,13 +35,38 @@
           <h1>minu kliendid</h1>
       
       </div>
-      
+      <button id='button' click.delegate="function()" style="margin-bottom: 2%"><i class="fa fa-plus"></i>LISA KLIENT</button>
+          <div class="col-sm-12" id="newpost">
+          
+          
+          <div class="col-sm-3"></div>
+          
+          <div class="col-sm-6">
+              
+              
+            
+              <form id="productform" submit.delegate="addClient()">
+               
+                <label for="clientName">Kliendi nimi:</label>
+                <input type="text" id="clientName" name="clientName" placeholder="Sisesta kliendi nimi.." required value.bind="clientData.clientName">
+
+                <label for="clientMail">Kliendi e-mail:</label>
+                <input type="text" id="clientMail" name="clientMail" value ="0" placeholder="Sisesta kliendi e-mail.." value.bind="clientData.clientMail">  
+              
+
+                <input type="submit" name="submit" value="LISA KLIENT">
+
+              </form>
+            </div>
+            <div class="col-sm-3"></div>
+
+          </div>
       <div class="myclients" style="background-color: white">
             
             <div class="col-sm-1"></div>
             <div class="col-sm-10">
 			  
-                  <table class="table">
+                  <table class="table table-striped" class="table">
                     <thead>				
 
                       <tr>
@@ -50,9 +75,10 @@
                       </tr>
                     </thead>
                     <tbody>
-						<ul>
-                            <li repeat.for="user of userList">${user.productPrice} ${user.productName}</li>
-                        </ul>
+						          <tr repeat.for="client of clientList">                        
+                            <td>${client.clientName} </td>
+                            <td>${client.clientMail} </td>
+                      </tr>
                     </tbody>
                   </table>
 				
