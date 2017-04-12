@@ -23,18 +23,30 @@ export class myclients {
 
 	clientData = {}
 	clientList = []
-    
+   
+    //Sorteerimiseks vajalik - asendasin activate() funktsiooni
+	users = [];
+    bind(){
+        let client = new HttpClient();
+        return client.fetch('http://localhost:8080/client')
+            .then(response => response.json())
+            .then(users => this.users = users);
+    }
+    //sorteerimiseks vajaliku lõpp
+
+    //filtreerimiseks vajalik
+    filters = [
+        {value: '', keys: ['clientName' , 'clientMail']},
+     
+    ];
+    //filtreerimiseks vajaliku lõpp
+
     constructor() {
 		this.appName = "SalesTrack"
 		this.count = 0
 	}
 
-	activate() {
-		let client = new HttpClient();
-	    client.fetch('http://localhost:8080/client')
-			.then(response => response.json())
-			.then(client => this.clientList = client);
-	}
+	
 
 	addClient() {
 		let client = new HttpClient();

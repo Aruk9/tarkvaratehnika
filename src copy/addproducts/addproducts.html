@@ -71,7 +71,17 @@
 
           </div>
         
-        
+         <!-- filtreerimise lahter -->
+      <div class="col-sm-12">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
+      <div class="form-group">
+        <input type="text" style="padding-top:0px; padding-bottom:0px" value.bind="filters[0].value" placeholder="Otsi.." class="form-control"/>
+      </div>
+      </div>
+      <div class="col-sm-3"></div>
+      </div>
+      <!-- filtreerimise lahtri lõpp -->
       
          <div class="myproducts" style="background-color: white">
             
@@ -81,14 +91,14 @@
                 <p class="text4" style="font-family: 'Exo'; margin-top:3%">KÕIK TOOTED</p>
              
    
-                  <table class="table table-striped" id="allproductsTable">
+                  <table class="table table-striped" aurelia-table="data.bind: users; display-data.bind: userList; filters.bind: filters" id="allproductsTable">
                     <thead>				
                       <tr>
                         <th>Pilt</th>
-                        <th>Nimi</th>
-                        <th>Hind</th>
-                        <th>Kogus</th>
-                        <th>Kirjeldus</th>
+                        <th aut-sort="key: productName">Nimi</th>
+                        <th aut-sort="key: productPrice">Hind</th>
+                        <th aut-sort="key: quantity">Kogus</th>
+                        <th aut-sort="key: description">Kirjeldus</th>
 						<th>Kustuta</th>
                       </tr>
                     </thead>
