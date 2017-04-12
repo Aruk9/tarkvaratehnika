@@ -24,18 +24,28 @@ export class addproducts {
         }
 
 	userData = {}
-	userList = []
-    
+	userList = [];
+
+	//Sorteerimiseks vajalik - asendasin activate() funktsiooni
+	users = [];
+    bind(){
+        let client = new HttpClient();
+        return client.fetch('http://localhost:8080/users')
+            .then(response => response.json())
+            .then(users => this.users = users);
+    }
+    //sorteerimiseks vajaliku lõpp
+
+    //filtreerimiseks vajalik
+    filters = [
+        {value: '', keys: ['productName' , 'description' , 'productPrice']},
+     
+    ];
+    //filtreerimiseks vajaliku lõpp
+
     constructor() {
 		this.appName = "SalesTrack"
 		this.count = 0
-	}
-
-	activate() {
-		let client = new HttpClient();
-	    client.fetch('http://localhost:8080/users')
-			.then(response => response.json())
-			.then(users => this.userList = users);
 	}
 
 	addProduct() {
