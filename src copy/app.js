@@ -19,6 +19,10 @@ configureRouter(config, router) {
         { route: 'saleAction', name: 'saleAction', moduleId: 'saleAction/saleAction',  title: "Uus müük", nav: true },
         
         { route: 'login', name: 'login', moduleId: 'login/login',  title: "Logi sisse", nav: true },
+        
+        { route: 'mysales', name: 'mysales', moduleId: 'mysales/mysales',  title: "Minu müügid", nav: true },
+        
+        { route: 'changeproduct', name: 'changeproduct', moduleId: 'changeproduct/changeproduct',  title: "Muuda toodet", nav: true },
     ]);
   }
 }

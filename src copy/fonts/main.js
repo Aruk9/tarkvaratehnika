@@ -1,5 +1,7 @@
 import environment from './environment';
 
+
+
 //Configure Bluebird Promises.
 Promise.config({
   warnings: {
@@ -10,7 +12,9 @@ Promise.config({
 export function configure(aurelia) {
   aurelia.use
     .standardConfiguration()
-    .feature('resources');
+    .feature('resources')
+    .developmentLogging()
+    .plugin('aurelia-table');
 
   if (environment.debug) {
     aurelia.use.developmentLogging();

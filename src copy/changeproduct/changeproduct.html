@@ -34,17 +34,14 @@
           <h1>minu tooted</h1>
         
       </div>
-        
-      <button id='button' click.delegate="function()" style="margin-bottom: 2%"><i class="fa fa-plus"></i>LISA TOODE</button>
+    
       
-      <div  class="col-sm-12" id="newpost" style="display: none;">
+      <div  class="col-sm-12" style="margin-top: 2%; margin-bottom: 2% ">
           
           <div class="col-sm-3"></div>
     
           <div class="col-sm-6">
               
-              
-            
               <form id="productform" submit.delegate="addProduct()">
                
                 <label for="productName">Toote nimi:</label>
@@ -61,63 +58,19 @@
                   
                 <label for="productPicture">Toote pilt:</label>
                 <input type="file" id="productPicture" name="productPicture" placeholder="Sisesta toote pilt.." value.bind="userData.productPicture">
+                
 
-                <input type="submit" name="submit" value="LISA TOODE">
+                <input type="submit" name="submit" style="float: left; margin-left: 30%" value="MUUDA">
+                <input type="submit" name="submit" style="float: right; margin-right: 30%" value="KUSTUTA">
+                  
+                
 
               </form>
             </div>
             <div class="col-sm-3"></div>
 
           </div>
-        
-         <!-- filtreerimise lahter -->
-      <div class="col-sm-12">
-      <div class="col-sm-3"></div>
-      <div class="col-sm-6">
-      <div class="form-group">
-        <input type="text" style="padding-top:0px; padding-bottom:0px" value.bind="filters[0].value" placeholder="Otsi.." class="form-control"/>
-      </div>
-      </div>
-      <div class="col-sm-3"></div>
-      </div>
-      <!-- filtreerimise lahtri lõpp -->
-      
-         <div class="myproducts" style="background-color: white">
-            
-            <div class="col-sm-1"></div>
-            <div class="col-sm-10">
-                
-                <p class="text4" style="font-family: 'Exo'; margin-top:3%">KÕIK TOOTED</p>
-             
-   
-                  <table class="table table-striped" aurelia-table="data.bind: users; display-data.bind: userList; filters.bind: filters" id="allproductsTable">
-                    <thead>				
-                      <tr>
-                        <th>Pilt</th>
-                        <th aut-sort="key: productName">Nimi</th>
-                        <th aut-sort="key: productPrice">Hind</th>
-                        <th aut-sort="key: quantity">Kogus</th>
-                        <th aut-sort="key: description">Kirjeldus</th>
-						<th>Kustuta</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-						<tr align = "left" repeat.for="user of userList">
-							<td></td>
-                            <td>${user.productName} </td>
-                            <td>${user.productPrice} </td>
-                            <td>${user.quantity} </td>
-                            <td>${user.description} </td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                  </table>
-				
-            </div>
-                
-                <div class="col-sm-1"></div>
-      
-        </div>
+       
       
     <script>
         
