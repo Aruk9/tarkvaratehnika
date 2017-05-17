@@ -40,7 +40,7 @@ export class saleAction {
 		//var body2 = document.getElementById("table").innerHTML;
 		var body = document.getElementById("summa").innerHTML;
 		// var body =
-		window.location.href = "mailto:" + email + "?subject=" + subject + " " + date + "&body=Siin on Teie arve. \n Summa kokku on: " + body + "€ \n Külastage meid jälle! PS:" /*+ body2*/;
+		window.location.href = "mailto:" + email + "?subject=" + subject + " " + date + "&body=Siin on Teie arve. \n Summa kokku on: " + body + "€ \n Külastage meid jälle!" /*PS:+ body2*/;
 		client.fetch('http://localhost:8080/client/add', {
 			'method': "POST",
 			'body': json(this.clientData)

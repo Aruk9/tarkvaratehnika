@@ -23,7 +23,9 @@
     <div class="header2">
           
         <ul class="topnav" id="myTopnav">
+          <li><a href="#/myaccount"><i class="fa fa-chevron-right"></i>DEMO</a></li>
           <li><a href="index"><i class="fa fa-chevron-left"></i>ESILEHT</a></li>
+
           
           <li class="icon">
             <a href="javascript:void(0);" click.delegate="myFunction()">&#9776;</a>
@@ -44,16 +46,19 @@
            <form id="loginform" submit.delegate="addUser()">
                 <label for="userName"><b>Kasutajanimi</b></label>
                 <br>
-                <input type="text"id="userName" placeholder="Kasutajanimi" name="userName" required value.bind="userData.userName">
+                <input type="text"id="userName" placeholder="Kasutajanimi" name="userName"  value.bind="userData.userName">
                 <br>
                 <label for="password"><b>Salasõna</b></label>
                 <br>
-                <input type="password" id="password" placeholder="Sisesta salasõna" name="password" required value.bind="userData.password">
+                <input type="password" id="password" placeholder="Sisesta salasõna" name="password"  value.bind="userData.password">
                 <input type="checkbox" checked="checked"> Mäleta mind
 
                 <div class="clearfix">
                   <button type="button" class="cancelbtn">Tühista</button>
-                  <button type="submit" class="signupbtn">Logi Sisse</button>
+                  
+                  <button href="#/myaccount" class="signupbtn" >Logi Sisse</button>
+
+                 
                 </div>
             </form>
           </div>
@@ -98,7 +103,8 @@
 
 				<div>
 					<i class="fa fa-envelope"></i>
-					<p><a href="mailto:support@salestrack.com">support@salestrack.com</a></p>
+					<p><a href="mailto:salestrackee@gmail.com">salestrackee@gmail.com</a></p>
+        
 				</div>
 
 			</div>
