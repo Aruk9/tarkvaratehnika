@@ -57,4 +57,30 @@ export class addproducts {
 		})
 			.then(response => response.json())			
 	}
+	deleteProduct(id) {
+    	console.log(id);
+		let client = new HttpClient();
+		let result = this.grep(id);
+			if (typeof result == 'undefined') {
+			  console.log("objekti ei leitud")
+			} else {
+			console.log("objekt on olemas")
+			  client.fetch('http://localhost:8080/users/delete/{id}', {
+			'method': "DELETE",
+			
+
+		})
+			console.log(id)			
+			} 
+	}
+
+	grep(id){
+			for (var i = 0, len = this.users.length; i < len; i++) 
+		{
+	    if (this.users[i].id === id)
+	    {
+	        return this.users[i]; // Return as soon as the object is found
+	    }
+			}
+		}
 }

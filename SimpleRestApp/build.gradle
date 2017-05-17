@@ -19,6 +19,47 @@ jar {
 	version = '0.0.1-SNAPSHOT'
 }
 
+
+//TASK1
+///version = '1.0'
+///targetCompatibility = 1.8
+//create a single Jar with all dependencies
+///task fatJar(type: Jar) {
+///	manifest {
+///        attributes 'Implementation-Title': 'Gradle Jar File Example',
+///        	'Implementation-Version': version,
+///        	'Main-Class': 'com.mkyong.DateUtils'
+///    }
+///    baseName = project.name + '-all'
+///    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+///    with jar
+///}
+/////Get dependencies from Maven central repository
+///repositories {
+///    mavenCentral()
+///}
+/////Project dependencies
+///dependencies {
+///	compile 'ch.qos.logback:logback-classic:1.1.2'
+///}
+///
+//TASK2
+///task copyJarToBin(dependsOn: 'fatJar') {
+///    doLast {
+///     copy {
+///            from 'build/libs/SimpleRestApp-all-1.0.jar'
+///            into "jar-copy/testime"
+///        }
+///    }
+///}
+
+//TASK3
+///task rename(dependsOn: 'copyJarToBin') {
+///	doLast{
+///		println("Jar fail genereeritud ja kopeeritud")
+///	}
+///}
+
 sourceCompatibility = 1.8
 
 repositories {

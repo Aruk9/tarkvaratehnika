@@ -59,9 +59,10 @@
                 <label for="description">Kirjeldus:</label>
                 <textarea id="description" name="description" placeholder="Toote täpsem kirjeldus.." style="height:200px" value.bind="userData.description"></textarea>
                   
+                <!--
                 <label for="productPicture">Toote pilt:</label>
                 <input type="file" id="productPicture" name="productPicture" placeholder="Sisesta toote pilt.." value.bind="userData.productPicture">
-
+				-->
                 <input type="submit" name="submit" value="LISA TOODE">
 
               </form>
@@ -93,22 +94,25 @@
                   <table class="table table-striped" aurelia-table="data.bind: users; display-data.bind: userList; filters.bind: filters" id="allproductsTable">
                     <thead>				
                       <tr>
-                        <th>Pilt</th>
+                        
                         <th aut-sort="key: productName">Nimi</th>
                         <th aut-sort="key: productPrice">Hind</th>
                         <th aut-sort="key: quantity">Kogus</th>
                         <th aut-sort="key: description">Kirjeldus</th>
-						<th>Kustuta</th>
+						<!--<th>Kustuta</th>-->
                       </tr>
                     </thead>
                     <tbody>
 						<tr align = "left" repeat.for="user of userList">
-							<td></td>
+							
                             <td>${user.productName} </td>
                             <td>${user.productPrice} </td>
                             <td>${user.quantity} </td>
                             <td>${user.description} </td>
-                            <td></td>
+                            <!--
+                            <td><form submit.delegate= "deleteProduct(user.id)">                               
+                              <input type="submit" name="submit"  value="Kustuta" >
+                            </form></td>-->
                         </tr>
                     </tbody>
                   </table>

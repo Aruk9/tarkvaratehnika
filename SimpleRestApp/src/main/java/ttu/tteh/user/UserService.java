@@ -6,6 +6,8 @@ import lombok.Setter;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
 
@@ -23,7 +25,19 @@ public class UserService {
 		return userRepository.save(user);
 	}
 	
-
+	void delete(User user) {
+		
+	}
+	
+	User addToCart(User user) {
+		return userRepository.save(user);
+	}
+	
+	User getToodeById(long toodeId) {
+		return userRepository.findOne(toodeId);
+	}
+	
+	
 	List<User> getAllUsers() {
 		return userRepository.findAll();
 	}

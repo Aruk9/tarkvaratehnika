@@ -17,9 +17,7 @@
 
     </head>
     <body>
-
       <div class="header2" style="background-image:url(src/media/front1.jpeg)">
-        
         <ul class="topnav" id="myTopnav">
           <li><a href="index"><i class="fa fa-sign-out"></i>LOGI VÄLJA</a></li>
           <li><a href="#/myclients"><i class="fa fa-users"></i>MINU KLIENDID</a></li>
@@ -28,50 +26,57 @@
             <a href="javascript:void(0);" click.delegate="myFunction()">&#9776;</a>
           </li>
         </ul>
-          
-          <img class="logo1" src="src/media/salestrack-logo-valge-vaike.png">
-          
+          <img class="logo1" src="src/media/salestrack-logo-valge-vaike.png"> 
           <h1>minu tooted</h1>
-        
       </div>
     
       
       <div  class="col-sm-12" style="margin-top: 2%; margin-bottom: 2% ">
-          
-          <div class="col-sm-3"></div>
-    
-          <div class="col-sm-6">
-              
-              <form id="productform" submit.delegate="addProduct()">
-               
-                <label for="productName">Toote nimi:</label>
-                <input type="text" id="productName" name="productName" placeholder="Sisesta toote nimi.." required value.bind="userData.productName">
-
-                <label for="productPrice">Toote hind:</label>
-                <input type="text" id="productPrice" name="productPrice" value ="0" placeholder="Sisesta toote hind.." value.bind="userData.productPrice">
-                  
-                <label for="quantity">Kogus:</label>
-                <input type="text" id="quantity" name="quantity" value="0" placeholder="Sisesta toote kogus.." value.bind="userData.quantity">
-
-                <label for="description">Kirjeldus:</label>
-                <textarea id="description" name="description" placeholder="Toote täpsem kirjeldus.." style="height:200px" value.bind="userData.description"></textarea>
-                  
-                <label for="productPicture">Toote pilt:</label>
-                <input type="file" id="productPicture" name="productPicture" placeholder="Sisesta toote pilt.." value.bind="userData.productPicture">
-                
-
-                <input type="submit" name="submit" style="float: left; margin-left: 30%" value="MUUDA">
-                <input type="submit" name="submit" style="float: right; margin-right: 30%" value="KUSTUTA">
-                  
-                
-
-              </form>
-            </div>
-            <div class="col-sm-3"></div>
-
-          </div>
-       
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
+      <div class="form-group">
+        <input type="text" style="padding-top:0px; padding-bottom:0px" value.bind="filters[0].value" placeholder="Otsi.." class="form-control"/>
+      </div>
+      </div>
+      <div class="col-sm-3"></div>
+      </div>
+      <!-- filtreerimise lahtri lõpp -->
       
+         <div class="myproducts" style="background-color: white">
+            
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                
+                <p class="text4" style="font-family: 'Exo'; margin-top:3%">TOOTED</p>
+              <table class="table table-striped" aurelia-table="data.bind: users; display-data.bind: userList; filters.bind: filters" id="allproductsTable">
+                    <thead>       
+                      <tr>
+                        
+                        <th aut-sort="key: productName">Nimi</th>
+                        <th aut-sort="key: productPrice">Hind</th>
+                        <th aut-sort="key: quantity">Kogus</th>
+                        <th aut-sort="key: description">Kirjeldus</th>
+                        <th>Muuda</th>
+            <!--<th>Kustuta</th>-->
+                      </tr>
+                    </thead>
+                    <tbody>
+            <tr align = "left" repeat.for="user of userList">
+              
+                            <td><input type="textarea" value.bind = "user.productName"></td>
+                            <td><input type="textarea" value.bind = "user.productPrice"></td>
+                            <td><input type="textarea" value.bind = "user.quantity"></td>
+                            <td><input type="textarea" value.bind = "user.description"></td>
+                          
+                            <td><form submit.delegate= "changeProduct(user.id)">                               
+                              <input type="submit" name="submit"  value="Muuda" >
+                            </form></td>
+                        </tr>
+                    </tbody>
+                  </table>
+            </div>
+      <div class="col-sm-1"></div>
+      </div>
     <script>
         
        

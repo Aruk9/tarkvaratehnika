@@ -17,10 +17,29 @@ public class UserController {
 		this.userService = userService;
 	}
 	
+	@RequestMapping(value = "/toode/{id}", method=RequestMethod.GET)
+	public User getToode(@PathVariable("id") long toodeId) {
+		return userService.getToodeById(toodeId);
+	}
+	
+	
 	@RequestMapping(value="/users/add", method=RequestMethod.POST,
 			consumes = "application/json")
 	public User addUser(@RequestBody User user) {
 		return userService.addUser(user);
+	}
+	
+	@RequestMapping(value="/users/delete/{id}", method=RequestMethod.DELETE)
+	public void delete(User user) {
+		
+	}
+	
+	
+	
+	@RequestMapping(value="/cart/add", method=RequestMethod.PUT,
+			consumes = "application/json")
+	public User addToCart(@RequestBody User user) {
+		return userService.addToCart(user);
 	}
 	
 	@RequestMapping(value="/users", method=RequestMethod.GET)
